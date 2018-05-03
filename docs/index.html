@@ -1,0 +1,148 @@
+<html lang="zh-CN"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>后台管理首页</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row mt-50">
+        <div class="visible-xs-block col-xs-12">
+            <nav class="navbar navbar-default navbar-fixed-bottom">
+                <ul class="nav nav-tabs nav-justified">
+                    <li><a href="pageList.html">文章管理</a></li>
+                    <li><a href="userList.html">用户管理</a></li>
+                    <li><a href="addPage.html">文章发布</a></li>
+                    <li><a href="cateList.html">分类管理</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li>
+                    <a href="index.html"><h3>ChanLily</h3></a>
+                </li>
+                <li>
+                    <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;首页</a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;文章管理<span class="glyphicon glyphicon-menu-down f_r glyphicon-menu-up"></span></a>
+                    <ul class="nav userlist noblock">
+                        <li><a href="addPage.html">添加文章</a></li>
+                        <li><a href="pageList.html">文章列表</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;用户管理
+                        <span class="glyphicon glyphicon-menu-down f_r glyphicon-menu-up"></span></a>
+                    <ul class="nav userlist noblock">
+                        <li><a href="userList.html">用户管理</a></li>
+                        <li><a href="adminList.html">后台角色管理</a></li>
+                    </ul>
+                </li>
+                <!--                <li>-->
+                <!--                    <a href="addPage.html"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;文章发布</a>-->
+                <!--                </li>-->
+                <li>
+                    <a href="cateList.html"><span class="glyphicon glyphicon-bookmark"></span>&nbsp;&nbsp;&nbsp;分类管理</a>
+                </li>
+                <li class="active">
+                    <a href="index.html"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;&nbsp;配置信息</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <nav class="navbar col-sm-offset-3 col-md-offset-2 navbar-fixed-top">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="#" onclick="javascript :history.back(-1);"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>返回</a></li>
+                        <li><a href="index.html" title="首页"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;网站首页</a></li>
+                    </ul>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" title="admin"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;admin</a></li>
+                        <li><a href="login.html">退出</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="searchform" method="post" action="#">
+                        <input type="text" class="form-control" id="search" name="search" placeholder="搜索">
+                        <span class="glyphicon glyphicon-search"></span>
+                        <button class="glyphicon glyphicon-search" type="submit" aria-hidden="true"></button>
+                    </form>
+                </div>
+            </nav>    <div class="panel panel-default mt-20">
+            <div class="panel-heading">系统信息</div>
+            <div class="panel-body">
+                <p>使用php开发，mysql数据库操作</p>
+            </div>
+
+            <!-- Table -->
+            <table class="table">
+                <tbody><tr>
+                    <th>操作系统</th>
+                    <td>WINNT</td>
+                </tr>
+                <tr>
+                    <th>Apache版本</th>
+                    <td>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.9</td>
+                </tr>
+                <tr>
+                    <th>PHP版本</th>
+                    <td>7.0.9</td>
+                </tr>
+                <tr>
+                    <th>运行方式</th>
+                    <td>apache2handler</td>
+                </tr>
+                <tr>
+                    <th>系统名称</th>
+                    <td>后台管理系统</td>
+                </tr>
+                <tr>
+                    <th>开发人员</th>
+                    <td>chanLily</td>
+                </tr>
+                <tr>
+                    <th>github博客</th>
+                    <td><a href="https://chanLily.github.io">https://chanLily.github.io</a></td>
+                </tr>
+                </tbody></table>
+        </div>
+            <script>
+                $(".nav-sidebar").find("li").eq(9).addClass("active");
+            </script>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(".glyphicon-menu-down").parent().click(function () {
+        $(this).find(".glyphicon-menu-down").toggleClass("glyphicon-menu-up");
+        $(this).parent().find(".nav").toggleClass("noblock");
+    });
+</script>
+
+</body></html>
